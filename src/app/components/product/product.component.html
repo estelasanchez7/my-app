@@ -1,0 +1,7 @@
+<ng-container *ngIf="product">
+  <h2>{{ product.title }}</h2>
+  <p>{{ product.price }}€</p>
+  <!-- el ngSrc hace que la página se carge a medida que el usuario va scrolleando y no toda de golpe, por lo tanto la página será más rápida -->
+  <img [ngSrc]="product.images[0]" width="640" height="480" alt="" /> 
+</ng-container>
+<ng-container *ngIf="!product"> Producto no renderizado </ng-container>
